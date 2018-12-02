@@ -1,41 +1,29 @@
-rawids = File.readlines('input.txt')
+raw_ids = File.readlines('input.txt')
 ids = []
 
-rawids.each do |id|
+raw_ids.each do |id|
   ids.push(id.split(''))
 end
 
 ids.each do |v|
   ids.each do |x|
-    diff = v-x;
-    if(diff === [])
-      #same
-      next
+    diff = v - x
+
+    next unless diff.length == 1
+
+    count = 0
+    last_index = 0
+
+    x.each_with_index do |item, i |
+      if item != v[i]
+        last_index = i
+        count += 1
+      end
     end
 
-    if(diff.length > 1)
-     # too many diffs
-     next
-    end
-
-    if(diff.length == 1)
-      # just one diff
-      count = 0
-      lastindex = 0
-
-      for i in 0..x.length
-        if x[i] != v[i]
-          lastindex = i
-          count += 1
-        end
-      end
-
-      if(count == 1)
-        puts x.join('')
-        puts v.join('')
-        x.delete_at(lastindex)
-        puts x.join('')
-      end
+    if count == 1
+      x.delete_at(last_index)
+      puts x.join('')
     end
   end
 end
