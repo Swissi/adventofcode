@@ -1,7 +1,6 @@
 sum = 0
-File.open("input.txt", "r") do |f|
-  f.each_line do |line|
-    sum = sum + Integer(line)
-  end
+content = File.readlines('input.txt')
+content.each do |c|
+  sum = sum + Integer(c)
 end
 puts sum

@@ -1,17 +1,12 @@
 sum = 0
 sums = [sum]
-factors = []
+factors = File.readlines("input.txt")
 gotone = false
 
-File.open("input.txt", "r") do |f|
-  f.each_line do |line|
-    factors.push(Integer(line))
-  end
-end
 
 loop do
   factors.each do |factor|
-    sum += factor
+    sum += Integer(factor)
     if sums.include?(sum)
       puts "got one!"
       gotone = true
