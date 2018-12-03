@@ -14,7 +14,7 @@ ids.each do |v|
     count = 0
     last_index = 0
 
-    x.each_with_index do |item, i |
+    x.each_with_index do |item, i|
       if item != v[i]
         last_index = i
         count += 1
