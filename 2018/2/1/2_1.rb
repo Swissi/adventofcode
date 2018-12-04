@@ -5,7 +5,7 @@ ids = File.readlines('input.txt')
 ids.each do |id|
   a = id.split('')
   b = Hash.new(0)
-
+#fzostwblnqkhpuzxirnevmaycq
   a.each do |v|
     b[v] += 1
   end
