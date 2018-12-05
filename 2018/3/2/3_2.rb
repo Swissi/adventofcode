@@ -1,4 +1,4 @@
-lines = File.readlines('input.txt')
+lines = File.readlines('i.txt')
 cloth = {}
 claims = 0
 lastid = ""

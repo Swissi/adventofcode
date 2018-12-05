@@ -6,7 +6,7 @@
 # [1518-06-06 00:25] wakes up
 
 require 'date'
-lines = File.readlines('input.txt')
+lines = File.readlines('i.txt')
 logs = {}
 guards = {}
 guards_total = {}

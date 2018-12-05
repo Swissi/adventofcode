@@ -1,6 +1,6 @@
 doubles = 0
 triples = 0
-ids = File.readlines('input.txt')
+ids = File.readlines('i.txt')
 
 ids.each do |id|
   a = id.split('')

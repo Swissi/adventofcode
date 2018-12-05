@@ -1,5 +1,5 @@
 require 'date'
-lines = File.readlines('input.txt')
+lines = File.readlines('i.txt')
 logs = {}
 guards = {}
 sleepy_minutes = {}
@@ -29,7 +29,7 @@ logs.sort.each do |log|
   next unless msg.include? 'wakes up'
 
   # register all minutes where he fell asleep
-  (start_minute..(log[0].min-1)).each do |i|
+  (start_minute..(log[0].min - 1)).each do |i|
     if sleepy_minutes[i].nil?
       sleepy_minutes[i] = 0
     else

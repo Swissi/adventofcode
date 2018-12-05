@@ -1,6 +1,6 @@
 sum = 0
 sums = [sum]
-factors = File.readlines("input.txt")
+factors = File.readlines("i.txt")
 gotone = false
 
 

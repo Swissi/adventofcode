@@ -1,4 +1,4 @@
-raw_ids = File.readlines('input.txt')
+raw_ids = File.readlines('i.txt')
 ids = []
 
 raw_ids.each do |id|

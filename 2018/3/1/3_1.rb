@@ -1,5 +1,5 @@
-#lines = File.readlines('input_example.txt')
-lines = File.readlines('input.txt')
+#lines = File.readlines('e.txt')
+lines = File.readlines('j.txt')
 cloth = {}
 claims = 0
 
