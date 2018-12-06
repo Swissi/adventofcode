@@ -1,4 +1,4 @@
-@raw_input = ""
+@raw_input = ''
 @inp_register = {}
 inp = File.readlines('i.txt')
 @raw_input = inp[0]
@@ -21,6 +21,7 @@ def snip(input, a)
     next_c = input[i+1]
 
     next if next_c.nil?
+
     if checkPair(current, next_c)
       # ok need to cut current and next_c out of string
       @inp_register[a].slice!(i,2)
@@ -31,21 +32,19 @@ end
 lowest = 1 << 64
 ('a'..'z').each do |a|
   raw = @raw_input
-  raw_lcase_trimmed = raw.tr(a,'')
+  raw_l_case_trimmed = raw.tr(a,'')
   aup = a.upcase
-  raw_all_trimmed = raw_lcase_trimmed.tr(aup, '')
+  raw_all_trimmed = raw_l_case_trimmed.tr(aup, '')
 
 
   @inp_register[a] = raw_all_trimmed
-  (0..10000).each do |i|
+  (0..10_000).each do
     snip(@inp_register[a], a)
   end
 
-  puts a + ": " + @inp_register[a].length.to_s
+  puts a + ': ' + @inp_register[a].length.to_s
 
-  if @inp_register[a].length < lowest
-    lowest = @inp_register[a].length
-  end
+  lowest = @inp_register[a].length if @inp_register[a].length < lowest
 end
 
 puts lowest
