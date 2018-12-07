@@ -7,7 +7,7 @@ def get_first_step(steps)
       found = true if step[1].include? k
     end
 
-    first_steps += k if found == false
+    first_steps += k unless found
   end
 
   first_steps
