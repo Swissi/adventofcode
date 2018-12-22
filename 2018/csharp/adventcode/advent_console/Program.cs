@@ -7,6 +7,8 @@ using advent_console._14;
 using advent_console._15;
 using advent_console._16;
 using advent_console._17;
+using advent_console._18;
+using advent_console._19;
 
 namespace advent_console
 {
@@ -23,8 +25,9 @@ namespace advent_console
             //tasklist.Add(new fourteen_one());
             //tasklist.Add(new FifteenOne());
             //tasklist.Add(new SixteenOne());
-            tasklist.Add(new SeventeenOne());
-
+            //tasklist.Add(new SeventeenOne());
+            //tasklist.Add(new EightteenOne());
+            tasklist.Add(new NineteenOne());
 
             foreach (IPart part in tasklist)
             {
